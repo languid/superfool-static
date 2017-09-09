@@ -1,0 +1,44 @@
+.sign-in {
+  h2 {
+    margin-bottom: 80px;
+  }
+  .form {
+    padding: 0 100px;
+  }
+  .form-group {
+    margin-bottom: 32px;
+  }
+  .radio-inline {
+    input {
+      top: 4px;
+    }
+    margin-left: 50px;
+    @extend .fz-20px;
+  }
+  .control-label {
+    font-weight: normal;
+    @extend .fz-22px;
+  }
+  .form-control {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @extend .fz-16px;
+  }
+  input.form-control {
+    height: 46px;
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  .sign-in {
+    .form {
+      padding: 0 $spacer;
+    }
+    .radio-inline {
+      margin-left: 10px;
+    }
+  }
+}

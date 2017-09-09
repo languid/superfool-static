@@ -1,0 +1,55 @@
+.user-detail {
+  h2 {
+    margin-bottom: 80px;
+  }
+  .panel {
+    width: 80%;
+    max-width: 545px;
+    padding: 42px 28px 30px 47px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,.5);
+
+    .panel-title {
+      @extend .fz-20px;
+      color: #f9be2c;
+    }
+
+    .panel-body {
+      position: relative;
+      padding-top: 138px;
+      padding-bottom: 103px;
+    }
+    .avator {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .name {
+      margin-bottom: 38px;
+      letter-spacing: $spacer;
+      @extend .fz-40px;
+    }
+    .role {
+      margin-bottom: 22px;
+      color: #45eaf4;
+      @extend .fz-20px;
+    }
+    .projects {
+      margin-bottom: 126px;
+    }
+    .words {
+      padding-right: 78px;
+      margin-bottom: 0;
+      line-height: 2.5em;
+      font-style: italic;
+      @extend .fz-18px;
+    }
+    .qr {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border: 1px solid #b8b8b8;
+    }
+  }
+}

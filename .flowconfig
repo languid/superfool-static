@@ -9,5 +9,5 @@ src
 experimental.strict_type_args=true
 unsafe.enable_getters_and_setters=true
 
-[lib]
+[libs]
 flow

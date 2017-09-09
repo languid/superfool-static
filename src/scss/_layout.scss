@@ -1,0 +1,49 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-bottom: 250px;
+  background-image: url("./assets/ft-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.header {
+  padding-top: 46px;
+}
+
+.brand {
+  padding-top: 120px;
+  margin-bottom: 100px;
+  h1 {
+    margin-bottom: 0;
+    img {
+      display: block;
+      margin: 0 auto 50px;
+    }
+    span {
+      display: inline-block;
+      padding: 5px 55px;
+      background: #f9be2c;
+      color: #fff;
+      @extend .fz-24px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  body {
+    background-size: 100%;
+  }
+  .header {
+    padding-top: $spacer;
+  }
+  .brand {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    img {
+      width: 80%
+    }
+  }
+}
