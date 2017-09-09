@@ -188,8 +188,5 @@
   }
 })(window);
 
-var a = 10;
-console.log(a);
-
 }());
 //# sourceMappingURL=bundle.js.map

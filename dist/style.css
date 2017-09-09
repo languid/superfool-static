@@ -5887,6 +5887,14 @@ body {
     .brand img {
       width: 80%; } }
 
+.home .brand p {
+  margin-top: 38px;
+  color: #caf5ff; }
+  .home .brand p i {
+    padding: 2px 0;
+    margin: 0 20px;
+    border-right: 2px solid #fff; }
+
 .sign-in h2 {
   margin-bottom: 80px; }
 
