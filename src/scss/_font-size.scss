@@ -1,3 +1,15 @@
+.fz-10px {
+  font-size: .625rem;
+  transform: scale(.833);
+  transform-origin: left top;
+}
+
+.fz-11px {
+  font-size: .6875rem;
+  transform: scale(.916);
+  transform-origin: left top;
+}
+
 .fz-12px {
   font-size: .75rem;
 }
@@ -26,6 +38,26 @@
   font-size: 1.5rem;
 }
 
+.fz-28px {
+  font-size: 1.75rem;
+}
+
+.fz-30px {
+  font-size: 1.875rem;
+}
+
+.fz-34px {
+  font-size: 2.125rem;
+}
+
+.fz-38px {
+  font-size: 2.375rem;
+}
+
 .fz-40px {
   font-size: 2.5rem;
+}
+
+.fz-44px {
+  font-size: 2.75rem;
 }

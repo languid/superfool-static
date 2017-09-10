@@ -9,3 +9,19 @@
     padding: 0;
   }
 }
+
+.list-group-clean {
+  padding: 0;
+  background: none;
+  border: none;
+  .list-group-item {
+    padding: 0;
+    background: none;
+    border: none;
+  }
+}
+
+.btn-secondary {
+  @include button-variant(#fff, $secondary-color, $secondary-color);
+  border-radius: 0;
+}

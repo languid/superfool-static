@@ -1,3 +1,35 @@
 .m-a {
-  margin: 0 auto;
+  margin: 0 auto !important;
+}
+
+.ml-a {
+  margin-left: auto !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+// fake for ie8
+.d-flex {
+  @include clearfix;
+  .col {
+    float: left;
+  }
+  .col + .col {
+    float: none;
+    overflow: hidden;
+  }
 }

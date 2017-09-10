@@ -12,7 +12,7 @@ gulp.task('html', () => {
   views.forEach(name => {
     renderer.render(name, {}, (err, html) => {
       if (!err) {
-        fs.writeFile(`${name}.html`, html, err => {
+        fs.writeFile(`views/${name}.html`, html, err => {
           if (!err) {
             console.log(`${name} compiled`)
           }
