@@ -6013,9 +6013,12 @@ body {
   .home .section-title {
     margin-top: 30px; }
   .home .brand {
+    padding-top: 49px;
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom; }
+    .home .brand .title {
+      margin-top: 130px; }
     .home .brand .text {
       margin-top: 38px;
       text-align: center;
@@ -6192,7 +6195,8 @@ body {
   .home .steps {
     padding-top: 60px;
     height: 996px;
-    background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top; }
+    background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
+    background-size: cover; }
     .home .steps .step-list {
       padding-bottom: 20px;
       margin: 232px 11px 0;

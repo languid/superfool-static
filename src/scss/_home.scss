@@ -30,9 +30,13 @@
   }
 
   .brand {
+    padding-top: 49px;
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom;
+    .title {
+      margin-top: 130px;
+    }
     .text {
       margin-top: 38px;
       text-align: center;
@@ -248,6 +252,7 @@
     padding-top: 60px;
     height: 996px;
     background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
+    background-size: cover;
 
     .step-list {
       padding-bottom: 20px;

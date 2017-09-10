@@ -1,13 +1,10 @@
 <% extend '_layout' %>
 <body class="home">
+<link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.css">
 <div class="wrap">
-  <div class="header">
+  <div class="section brand">
     <div class="container">
       <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节" class="logo">
-    </div>
-  </div>
-  <div class="brand">
-    <div class="container">
       <h1 class="title">
         <img src="../dist/assets/title.png" alt="寻找未来金马甲">
         <span>首届中国天使投资节</span>
@@ -357,9 +354,12 @@ SuperFool中国首届个人天使节
   </div>
 </div>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.js"></script>
 <script src="https://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
 <script>
   ~function () {
+//    $('.wrap').fullpage();
+
     var pc = $('.perspective-card')
     TweenMax.set(pc, {rotationY: 0, rotationX: 0, rotationZ: 0, transformPerspective: 1000});
     pc.mouseover(function() {
