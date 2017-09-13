@@ -28,6 +28,15 @@
       text-align: center;
       line-height: 160px;
       @extend .fz-20px;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        z-index: 2;
+      }
     }
     .hint {
       color: #cdcdd0;

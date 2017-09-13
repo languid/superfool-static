@@ -55,6 +55,7 @@
       <div class="d-flex upload-img">
         <div class="col">
           <figure onclick="document.forms.form.file.click()">
+            <img class="avator" src="" alt="">
             <span class="hidden-xs">头像</span>
           </figure>
         </div>
@@ -69,6 +70,43 @@
     </form>
   </div>
 </div>
+<script>
+  queue.exec(function () {
+
+    if (window['FileReader']) {
+
+      var avator = document.querySelector('.avator')
+
+      function getFileReader (options) {
+        var fr = new FileReader()
+        options = Object.assign({
+          success: $.noop,
+          error: $.noop
+        }, options)
+        fr.onloadend = function () {
+          options.success.apply(fr, arguments)
+        }
+        fr.onerror = function () {
+          options.error.apply(fr, arguments)
+        }
+        return fr
+      }
+
+      $(document.forms.form.file).on('change', function (e) {
+        var file = e.target.files[0]
+        var fr = getFileReader({
+          success: function () {
+            avator.src = fr.result
+          },
+          error: function () {
+            console.log('error')
+          }
+        })
+        fr.readAsDataURL(file)
+      })
+    }
+  })
+</script>
 </body>
   <script>
     +function(){
