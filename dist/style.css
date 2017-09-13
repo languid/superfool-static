@@ -6131,6 +6131,10 @@ body {
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom; }
+    .home .brand .waves {
+      position: absolute;
+      left: 0;
+      top: 310px; }
     .home .brand .container {
       position: relative; }
       .home .brand .container:after {
@@ -6188,6 +6192,8 @@ body {
     @media (max-width: 479px) {
       .home .brand {
         padding-top: 2.46296%; }
+        .home .brand .waves {
+          top: 8%; }
         .home .brand .logo {
           margin-left: 15px; }
         .home .brand .title {

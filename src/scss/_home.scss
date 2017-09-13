@@ -152,6 +152,12 @@
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom;
+    .waves {
+      position: absolute;
+      left: 0;
+      top: 310px;
+    }
+
     .container {
       position: relative;
       &:after {
@@ -224,6 +230,9 @@
 
     @media #{$phone} {
       padding-top: pc180(26.6px);
+      .waves {
+        top: 8%;
+      }
       .logo {
         margin-left: 15px;
       }

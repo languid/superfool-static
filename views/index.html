@@ -35,6 +35,9 @@
   <body class="home">
 <div class="wrap">
   <div class="section brand">
+    <div class="waves">
+      <canvas id="waves"></canvas>
+    </div>
     <div class="container">
       <div class="logo">
         <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节">
@@ -399,6 +402,7 @@
   </a>
 </div>
 <script src="https://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
+<script src="../dist/sine-waves.min.js"></script>
 <script>
   queue.exec(function () {
     var isMobile =  function mobilecheck () {
@@ -410,6 +414,12 @@
     var wechart = $('.toolbar .wechat')
     var bg = wechart.find('.bg')
     var body = $(document.body)
+    var lineSize = 5
+    $('.gotop').on('click', function(){
+      body.animate({
+        scrollTop: '0'
+      })
+    })
 
     if (!isMobile) {
       var pc = $('.perspective-card')
@@ -436,6 +446,7 @@
         wechart.removeClass('active')
       })
     } else {
+      lineSize = 3
       wechart.on('mouseup', function () {
         body.addClass('blur')
         wechart.addClass('open')
@@ -445,6 +456,65 @@
         wechart.removeClass('open')
       })
     }
+
+    var waves = new SineWaves({
+      el: document.getElementById('waves'),
+
+      speed: 2,
+
+      width: function() {
+        return window.innerWidth;
+      },
+
+      height: function() {
+        return 300;
+      },
+
+      ease: 'SineInOut',
+
+      wavesWidth: '250%',
+
+      waves: [
+        {
+          timeModifier: 4,
+          lineWidth: lineSize,
+          amplitude: -40,
+          wavelength: 25
+        }, {
+          timeModifier: 2,
+          lineWidth: 2,
+          amplitude: -60,
+          wavelength: 25
+        }, {
+          timeModifier: 2,
+          lineWidth: lineSize,
+          amplitude: -50,
+          wavelength: 50,
+          type: function(x, waves) {
+            return Math.sin(x); // Combine two together
+          }
+        }
+      ],
+      // Called on window resize
+      resizeEvent: function() {
+        var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
+        gradient.addColorStop(0,"rgba(65, 27, 80, 0.2)");
+        gradient.addColorStop(.25,"rgba(42, 42, 105, 0.5)");
+        gradient.addColorStop(.5,"rgba(30, 76, 110, .8)");
+        gradient.addColorStop(.75,"rgba(42, 42, 105, 0.5)");
+        gradient.addColorStop(1,"rgba(65, 27, 80, 0.2)");
+        var index = -1;
+        var length = this.waves.length;
+        while(++index < length){
+          this.waves[index].strokeStyle = gradient;
+        }
+
+        // Clean Up
+        index = void 0;
+        length = void 0;
+        gradient = void 0;
+      }
+    });
   })
 </script>
 </body>
