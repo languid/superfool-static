@@ -1,55 +1,161 @@
 .user-detail {
   h2 {
-    margin-bottom: 80px;
+    margin-top: 85px;
   }
   .panel {
-    width: 80%;
-    max-width: 545px;
-    padding: 42px 28px 30px 47px;
-    margin: 0 auto;
-    background: #1a1a1a;
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,.5);
-
-    .panel-title {
-      @extend .fz-20px;
-      color: #f9be2c;
+    position: relative;
+    width: 95%;
+    max-width: 656px;
+    padding: 32px 35px 30px;
+    margin: 65px auto 0;
+    background: #211e51;
+    box-shadow: 0px 3px 3px 0 rgba(0,0,0,.5);
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("assets/user-top-bg.jpg") no-repeat;
     }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("assets/user-bottom-bg.jpg") no-repeat center bottom;
+    }
+  }
+  .panel-heading {
+    position: relative;
+    h5 {
+      margin-top: -14px;
+    }
+  }
 
+  .panel-body {
+    position: relative;
+    z-index: 1;
+    margin-top: 105px;
+    padding: 0 65px 30px;
+    border-radius: 5px;
+    background: #f4f5f6;
+    color: #000;
+  }
+  .avator {
+    position: relative;
+    width: 160px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: -90px auto 0;
+    background: #1a1a1a;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .name {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .3rem;
+    @extend .fz-50px;
+  }
+  .role {
+    margin-top: 25px;
+    text-align: center;
+    span {
+      display: inline-block;
+      padding: 12px 25px 12px 10px;
+      color: #febc49;
+      background: #fff0c0;
+      border-radius: 30px;
+      @extend .fz-20px;
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 8px;
+        width: 20px;
+        height: 26px;
+        background: url("assets/medal.png") no-repeat;
+        vertical-align: -5px;
+      }
+    }
+  }
+  .projects {
+    margin-top: 50px;
+    @extend .fz-20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .words {
+    margin-top: 60px;
+    line-height: 2.5em;
+    font-style: italic;
+    @extend .fz-18px;
+  }
+  .qr {
+    display: block;
+    width: 108px;
+    height: 108px;
+    padding: 8px;
+    margin: 35px auto 0;
+    background: #fff;
+  }
+  .btn {
+    display: block;
+    width: 290px;
+    margin: 60px auto 0;
+  }
+
+  @media #{$phone} {
+    h2 {
+      margin-top: pc180(158px);
+      font-size: 1.75rem;
+    }
+    .panel {
+      padding: pc180(42px) pc180(36px) pc180(68px);
+      margin-top: pc180(80px);
+    }
     .panel-body {
-      position: relative;
-      padding-top: 138px;
-      padding-bottom: 103px;
+      padding: 0 pc180(50px) 30px;
+    }
+    .panel-heading h5 {
+      margin-top: pc180(74px);
     }
     .avator {
-      position: absolute;
-      right: 0;
-      top: 0;
+      width: 40%;
+      margin-top: -20%;
     }
     .name {
-      margin-bottom: 38px;
-      letter-spacing: $spacer;
-      @extend .fz-40px;
+      font-size: 1.75rem;
     }
     .role {
-      margin-bottom: 22px;
-      color: #45eaf4;
-      @extend .fz-20px;
+      margin-top: pc180(50px);
+      span {
+        font-size: 1rem;
+        padding: 6px 12px 6px 10px;
+      }
     }
     .projects {
-      margin-bottom: 126px;
+      margin-top: pc180(80px);
+      font-size: 1rem;
     }
     .words {
-      padding-right: 78px;
-      margin-bottom: 0;
-      line-height: 2.5em;
-      font-style: italic;
-      @extend .fz-18px;
-    }
-    .qr {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      border: 1px solid #b8b8b8;
+      margin-top: pc180(100px);
+      font-size: .875rem;
     }
   }
 }

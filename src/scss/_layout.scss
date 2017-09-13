@@ -19,14 +19,13 @@ body {
 }
 
 .logo {
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 .brand {
-  margin-bottom: 100px;
   h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin-top: 128px;
     img {
       display: block;
       margin: 0 auto 50px;
@@ -44,20 +43,28 @@ body {
 @media #{$phone} {
   body {
     background-size: 100%;
+    padding-bottom: pc180(228px);
   }
   .header {
     padding-top: $spacer;
   }
+  .logo {
+    margin-left: 15px;
+    padding-top: pc180(76px);
+    img {
+      width: pc180(320px);
+    }
+  }
   .brand {
-    padding-top: 3.125rem;
-    margin-bottom: 3.125rem;
     h1 {
+      margin-top: pc180(85px);
       img {
         width: 61.111%;
         margin-bottom: pc180(50px);
       }
       span {
         padding: 5px 10px;
+        font-size: 1rem;
       }
     }
   }

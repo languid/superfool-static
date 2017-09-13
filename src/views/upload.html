@@ -1,24 +1,37 @@
 <% extend '_layout' %>
 <body class="sign-in upload">
 <div class="wrap">
-  <div class="header">
+  <div class="brand">
     <div class="container">
       <div class="logo">
         <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节">
       </div>
+      <h1 class="text-center">
+        <img src="../dist/assets/title.png" alt="寻找未来金马甲">
+        <span>首届中国天使投资节</span>
+      </h1>
     </div>
   </div>
-  <div class="brand text-center">
-    <h1>
-      <img src="../dist/assets/title.png" alt="寻找未来金马甲">
-      <span>首届中国天使投资节</span>
-    </h1>
-  </div>
   <div class="container">
-    <form class="form">
-
-      <div class="form-group submit-button text-center">
-        <button class="btn btn-lg btn-secondary w-25">立即生成</button>
+    <form class="form" id="form">
+      <div class="notify">
+        <img src="../dist/assets/submitted-sccess.jpg" alt="">
+        <p>信息已提交成功！</p>
+      </div>
+      <h5>上传头像，即可生成认证卡片</h5>
+      <div class="d-flex upload-img">
+        <div class="col">
+          <figure onclick="document.forms.form.file.click()">
+            <span class="hidden-xs">头像</span>
+          </figure>
+        </div>
+        <div class="col">
+          <input type="file" name="file" class="hidden" accept="image/jpeg,image/gif,image/png">
+          <button class="btn btn-default" onclick="document.forms.form.file.click()">本地上传</button>
+          <p class="visible-xs hint-click">* 点击头像区域上传图片</p>
+          <p class="hint">仅支持JPG、GIF、PNG格式，文件小于5M.(图片尽量高清）</p>
+          <button class="btn btn-lg btn-secondary">立即生成</button>
+        </div>
       </div>
     </form>
   </div>

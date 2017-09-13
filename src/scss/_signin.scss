@@ -1,18 +1,49 @@
 .sign-in {
   h2 {
-    margin-bottom: 80px;
+    margin-top: 74px;
   }
   .form {
+    margin-top: 80px;
     padding: 0 100px;
   }
   .form-group {
     margin-bottom: 32px;
   }
   .radio-inline {
+    padding-left: 25px;
     input {
-      top: 4px;
+      display: none;
     }
-    margin-left: 50px;
+    .indicator {
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #1d243c;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-left: -4px;
+        margin-top: -4px;
+        background: #343a50;
+        border-radius: 50%;
+      }
+    }
+    input:checked ~ .indicator {
+      background: #4863bc;
+      &:before {
+        background: #fff;
+      }
+    }
+    margin-right: 50px;
     @extend .fz-20px;
   }
   .control-label {
@@ -30,8 +61,10 @@
   textarea {
     resize: none;
   }
-  .submit-button {
-    margin-top: 140px;
+  .btn {
+    display: block;
+    width: 285px;
+    margin: 140px auto 0;
   }
   .hint {
     display: block;
@@ -39,15 +72,36 @@
     @extend .fz-14px;
     margin-top: 12px;
   }
-}
 
-@media (max-width: $screen-sm-min) {
-  .sign-in {
+  @media #{$phone} {
+    h2 {
+      font-size: 1.5rem;
+      margin-top: pc180(128px);
+    }
     .form {
       padding: 0 $spacer;
+      margin-top: pc180(80px);
+    }
+    .control-label {
+      margin-bottom: 10px;
+      font-size: 1rem;
     }
     .radio-inline {
-      margin-left: 10px;
+      font-size: 1rem;
+      margin-right: 10px;
+      margin-left: -15px;
+      .indicator {
+        margin-top: -5px;
+      }
+
+      & + .radio-inline {
+        margin-left: 8px;
+        margin-right: 0;
+      }
+    }
+    .btn {
+      margin-top: pc180(70px);
+      width: 100%;
     }
   }
 }
