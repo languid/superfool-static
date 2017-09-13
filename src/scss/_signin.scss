@@ -30,6 +30,15 @@
   textarea {
     resize: none;
   }
+  .submit-button {
+    margin-top: 140px;
+  }
+  .hint {
+    display: block;
+    color: #63687a;
+    @extend .fz-14px;
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: $screen-sm-min) {

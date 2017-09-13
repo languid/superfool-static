@@ -3,7 +3,9 @@
 <div class="wrap">
   <div class="header">
     <div class="container">
-      <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节" class="logo">
+      <div class="logo">
+        <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节">
+      </div>
     </div>
   </div>
   <div class="brand text-center">
@@ -16,37 +18,37 @@
     <h2 class="text-center mb-4">个人天使征集信息</h2>
     <form class="form">
       <div class="form-group row">
-        <label class="control-label col-sm-3">天使姓名：</label>
+        <label class="control-label col-sm-3">*天使姓名：</label>
         <div class="col-sm-9">
           <input class="form-control">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">联系方式：</label>
+        <label class="control-label col-sm-3">*联系方式：</label>
         <div class="col-sm-9">
           <input class="form-control">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">所投项目代表：</label>
+        <label class="control-label col-sm-3">*所投项目代表：</label>
         <div class="col-sm-9">
           <input class="form-control">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">投资时间：</label>
+        <label class="control-label col-sm-3">*投资时间：</label>
         <div class="col-sm-9">
           <input class="form-control">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">投资金额：</label>
+        <label class="control-label col-sm-3">*投资金额：</label>
         <div class="col-sm-9">
           <input class="form-control">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">投资轮数：</label>
+        <label class="control-label col-sm-3">*投资轮数：</label>
         <div class="col-sm-9">
           <label class="radio-inline">
             <input type="radio" name="step" value="option1">种子轮
@@ -60,25 +62,28 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">其他投资项目：</label>
+        <label class="control-label col-sm-3">
+          其他投资项目：
+          <small class="hint">限种子轮和天使轮项目</small>
+        </label>
         <div class="col-sm-9">
-          <textarea class="form-control" rows="8"></textarea>
+          <textarea class="form-control" rows="5" placeholder="(选填)"></textarea>
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">推荐人：</label>
         <div class="col-sm-9">
-          <input class="form-control">
+          <input class="form-control" placeholder="(选填)">
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">天使节寄语：</label>
         <div class="col-sm-9">
-          <textarea class="form-control" rows="8"></textarea>
+          <textarea class="form-control" rows="5" placeholder="(选填)"></textarea>
         </div>
       </div>
-      <div class="form-group text-right">
-        <button class="btn btn-secondary w-25">提交</button>
+      <div class="form-group submit-button text-center">
+        <button class="btn btn-lg btn-secondary w-25">提交信息</button>
       </div>
     </form>
   </div>

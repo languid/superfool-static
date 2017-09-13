@@ -22,6 +22,6 @@
 }
 
 .btn-secondary {
-  @include button-variant(#fff, $secondary-color, $secondary-color);
+  @include button-variant(#fff, #4863bc, #4863bc);
   border-radius: 0;
 }

@@ -32,4 +32,17 @@
     float: none;
     overflow: hidden;
   }
+
+  &.reverse {
+    .col {
+      float: right;
+    }
+    .col + .col {
+      float: none;
+    }
+  }
+}
+
+@function pc180 ($size) {
+  @return percentage($size/1080px)
 }

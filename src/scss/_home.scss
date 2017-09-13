@@ -15,6 +15,50 @@
     }
   }
 
+  .toolbar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    a {
+      position: relative;
+      display: block;
+      width: 42px;
+      height: 42px;
+      background: url("assets/toolbar-sp.png") no-repeat;
+      margin-bottom: 12px;
+    }
+    .ticket {
+      background-position: 0 -42px;
+    }
+    .wechat {
+      background-position: 0 -84px;
+    }
+    .gotop {
+      background-position: 0 -126px;
+    }
+    .qr {
+      position: absolute;
+      left: -136px;
+      top: -40px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 3px;
+      display: none;
+      &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        right: -20px;
+        top: 52px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: #fff;
+      }
+    }
+  }
+
   .section-title-en {
     margin-top: 0;
     padding-top: 98px;
@@ -29,11 +73,30 @@
     @extend .fz-38px;
   }
 
+  .logo {
+    @media #{$phone} {
+      padding-top: pc180(76px);
+      margin-left: 15px;
+    }
+  }
+
   .brand {
     padding-top: 49px;
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom;
+    .container {
+      position: relative;
+      &:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 11px;
+        height: 869px;
+        background: url("assets/brand-line.png") no-repeat;
+      }
+    }
     .title {
       margin-top: 130px;
     }
@@ -49,7 +112,8 @@
     }
     .links {
       float: right;
-      margin-top: 140px;
+      padding-top: 140px;
+      margin-right: 108px;
       a {
         display: block;
         @extend .fz-20px;
@@ -90,6 +154,65 @@
         @extend .fz-44px;
       }
     }
+
+    @media #{$phone} {
+      padding-top: pc180(26.6px);
+      .logo {
+        margin-left: 15px;
+      }
+      .title {
+        margin-top: pc180(85px);
+      }
+      .text {
+        margin-top: 5%;
+        font-size: .875rem;
+      }
+      .container:after {
+        display: none;
+      }
+      .d-flex {
+        .col {
+          float: none;
+        }
+      }
+      .schedule {
+        text-align: center;
+        margin-top: pc180(45px);
+        .list-group-item {
+          float: none;
+          margin: 0;
+        }
+        .location:after {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .country, .city {
+          display: inline;
+        }
+        .city:before {
+          content: '•';
+          font-size: 0.625rem;
+          margin: 0 10px 0 9px;
+        }
+        .time {
+          margin-top: 20px;
+        }
+      }
+      .links {
+        float: none;
+        margin: 0 20px;
+        padding-top: pc180(75px);
+        a {
+          text-align: center;
+          display: block;
+          padding: 15px 0;
+          background: #0c122a;
+        }
+        .user {
+          margin-bottom: pc180(30px);
+        }
+      }
+    }
   }
 
   .section {
@@ -97,24 +220,29 @@
   }
 
   .media {
-    padding: 58px 0 130px;
+    padding-bottom: 130px;
     background: #252c60 url("assets/media-ft-bg.jpg") no-repeat center bottom;
     h2 {
-      margin-top: 95px;
+      margin-bottom: 64px;
       @include tail($distance: 50px, $color: $secondary-color);
     }
     .d-flex {
-      margin-top: 64px;
+      margin-top: 95px;
     }
     .content {
-      padding: 0;
-      border: none;
+      position: relative;
+    }
+    p {
       color: #fff;
-      line-height: 2rem;
+      line-height: 2em;
       @extend .fz-16px;
+    }
+    p + p {
+      margin-top: 2em;
     }
     .video {
       text-align: right;
+      padding-top: 198px;
     }
   }
 
@@ -253,14 +381,17 @@
     height: 996px;
     background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
     background-size: cover;
-
     .step-list {
       padding-bottom: 20px;
       margin: 232px 11px 0;
-      border-bottom: 2px solid #abaeb7;
       @include clearfix;
+      .step {
+        border-bottom: 2px solid #aaadb6;
+        margin-bottom: 42px;
+      }
       .d-flex {
         display: inline-block;
+        margin-bottom: 42px;
       }
       .list-group-item {
         float: left;
@@ -270,32 +401,6 @@
       .content {
         padding-top: 6px;
         text-align: left;
-      }
-      i {
-        width: 100px;
-        height: 74px;
-        background: url("assets/steps-sp.png") no-repeat;
-      }
-      .c1 i {
-        width: 90px;
-      }
-      .c2 {
-        width: 34%;
-        i {
-          background-position: 0 -74px;
-        }
-      }
-      .c3 i {
-        background-position: 0 -148px;
-      }
-    }
-    .step-link {
-      @include clearfix;
-      margin: 0 11px;
-      margin-top: 42px;
-      .list-group-item {
-        width: 33%;
-        float: left;
       }
       .card {
         width: 316px;
@@ -309,23 +414,39 @@
         font-weight: bold;
         @extend .fz-22px;
       }
-      .c1 .card {
-        background: #0a1647 url("assets/steps-link-bg-1.jpg") no-repeat;
+      a {
+        color: $secondary-color;
+        @extend .fz-16px;
+      }
+      i {
+        width: 100px;
+        height: 74px;
+        background: url("assets/steps-sp.png") no-repeat;
+      }
+      .c1 {
+        .card {
+          background: #0a1647 url("assets/steps-link-bg-1.jpg") no-repeat;
+        }
+        i {
+          width: 90px;
+        }
       }
       .c2 {
         width: 34%;
         .card {
           background: #0a1647 url("assets/steps-link-bg-2.jpg") no-repeat;
         }
+        i {
+          background-position: 0 -74px;
+        }
       }
       .c3 {
         .card {
           background: #0a1647 url("assets/steps-link-bg-3.jpg") no-repeat;
         }
-      }
-      a {
-        color: $secondary-color;
-        @extend .fz-16px;
+        i {
+          background-position: 0 -148px;
+        }
       }
     }
   }
@@ -464,3 +585,4 @@
     }
   }
 }
+

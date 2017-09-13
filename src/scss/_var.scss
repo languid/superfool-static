@@ -1,3 +1,5 @@
+$phone: "(max-width: 479px)";
+
 $spacer: 15px;
 
 $main-color: #00d1ff;
@@ -11,6 +13,9 @@ $font-family-monospace: $font-family-base;
 $line-height-computed: 0;
 $text-color: #FFF;
 $input-border-radius: 0;
+$input-border: #4e5466;
+$input-bg: #1d243c;
+$input-color: #fff;
 
 $container-large-desktop: 1000px;
 $container-desktop: 1000px;

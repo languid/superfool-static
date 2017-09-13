@@ -6,7 +6,7 @@ const renderer = ECT({
   root: './src/views',
   ext: '.html'
 })
-const views = ['index', 'detail', 'signin']
+const views = ['index', 'detail', 'signin', 'upload']
 
 gulp.task('html', () => {
   views.forEach(name => {

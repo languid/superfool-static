@@ -1,64 +1,43 @@
 <% extend '_layout' %>
 <body class="home">
-<link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.css">
 <div class="wrap">
   <div class="section brand">
     <div class="container">
-      <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节" class="logo">
+      <div class="logo">
+        <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节">
+      </div>
       <h1 class="title">
         <img src="../dist/assets/title.png" alt="寻找未来金马甲">
         <span>首届中国天使投资节</span>
       </h1>
       <p class="text">金马甲天使大咖聚会<i></i>金种子项目发源地</p>
-      <div class="links">
-        <a href="#" class="user">个人天使请进>>></a>
-        <a href="#" class="signin">参会报名请进>>></a>
+      <div class="d-flex">
+        <div class="col">
+          <ul class="list-group list-group-clean schedule">
+            <li class="list-group-item">
+              <p class="location">
+                <span class="country">中国</span>
+                <span class="city">北京</span>
+              </p>
+              <p class="time">11/18</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="links">
+            <a href="#" class="user">个人天使请 进>>></a>
+            <a href="#" class="signin">参会报名请 进>>></a>
+          </div>
+        </div>
       </div>
-      <ul class="list-group list-group-clean schedule">
-        <li class="list-group-item">
-          <p class="location">
-            <span class="country">中国</span>
-            <span class="city">北京</span>
-          </p>
-          <p class="time">11/18</p>
-        </li>
-        <li class="list-group-item">
-          <p class="location">
-            <span class="country">中国</span>
-            <span class="city">上海</span>
-          </p>
-          <p class="time">11/30</p>
-        </li>
-        <li class="list-group-item">
-          <p class="location">
-            <span class="country">中国</span>
-            <span class="city">成都</span>
-          </p>
-          <p class="time">12/10</p>
-        </li>
-      </ul>
     </div>
   </div>
   <div class="section media">
     <div class="container">
-      <img src="../dist/assets/logo.png" class="logo">
-      <h2>
-        <img src="../dist/assets/media-title.png" alt="SuperFool">
-      </h2>
-      <div class="d-flex">
-        <pre class="content col">变化、认知、趋势、革新
-这个瞬息万变的数据时代
-究竟谁在掌舵风潮，蓄力未来？
-是别人眼中的SuperFool
-还是坚持本心的个人天使
-
-SuperFool中国首届个人天使节
-链接，碰撞，共生，共赢
-打破认知、探讨趋势
-掌舵风潮、蓄力未来
-
-寻找未来金马甲
-见证时代弄潮儿</pre>
+      <div class="logo">
+        <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节">
+      </div>
+      <div class="d-flex reverse">
         <div class="video col">
           <video controls="controls" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360">
             <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
@@ -73,6 +52,17 @@ SuperFool中国首届个人天使节
             </object>
           </video>
         </div>
+        <div class="col content">
+          <h2>
+            <img src="../dist/assets/media-title.png" alt="SuperFool">
+          </h2>
+          <div class="content">
+            <p>变化、认知、趋势、革新<br>这个瞬息万变的数据时代<br>究竟谁在掌舵风潮，蓄力未来？<br>是别人眼中的SuperFool<br>还是坚持本心的个人天使</p>
+            <p>SuperFool中国首届个人天使节<br>链接，碰撞，共生，共赢<br>打破认知、探讨趋势<br>掌舵风潮、蓄力未来</p>
+            <p>寻找未来金马甲<br>见证时代弄潮儿</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -154,47 +144,47 @@ SuperFool中国首届个人天使节
   </div>
   <div class="section steps">
     <div class="container">
-      <img src="../dist/assets/logo.png" class="logo">
+      <div class="logo">
+        <img src="../dist/assets/logo.png" alt="SUPERFOOL 天使节">
+      </div>
       <ul class="step-list list-group list-group-clean">
         <li class="list-group-item c1">
-          <div class="d-flex">
-            <i class="col"></i>
-            <p class="col content">
-              Chinese<br>Personal<br>Angel Yearbook
-            </p>
+          <div class="step">
+            <div class="d-flex">
+              <i class="col"></i>
+              <p class="col content">
+                Chinese<br>Personal<br>Angel Yearbook
+              </p>
+            </div>
           </div>
-        </li>
-        <li class="list-group-item c2">
-          <div class="d-flex">
-            <i class="col"></i>
-            <p class="col content">
-              Futures<br>Seed<br>Plan
-            </p>
-          </div>
-        </li>
-        <li class="list-group-item c3">
-          <div class="d-flex">
-            <i class="col"></i>
-            <p class="col content">
-              Angel Day<br>on-site<br>registration
-            </p>
-          </div>
-        </li>
-      </ul>
-      <ul class="step-link list-group list-group-clean">
-        <li class="list-group-item c1">
           <div class="card">
             <h5>中国个人天使年鉴</h5>
             <a href="#">认证注册>></a>
           </div>
         </li>
         <li class="list-group-item c2">
+          <div class="step">
+            <div class="d-flex">
+              <i class="col"></i>
+              <p class="col content">
+                Futures<br>Seed<br>Plan
+              </p>
+            </div>
+          </div>
           <div class="card m-a">
             <h5>未来金种子计划</h5>
             <a href="#">申请加入>></a>
           </div>
         </li>
         <li class="list-group-item c3">
+          <div class="step">
+            <div class="d-flex">
+              <i class="col"></i>
+              <p class="col content">
+                Angel Day<br>on-site<br>registration
+              </p>
+            </div>
+          </div>
           <div class="card ml-a">
             <h5>天使节现场报名</h5>
             <a href="#">门票预约>></a>
@@ -353,13 +343,20 @@ SuperFool中国首届个人天使节
     </div>
   </div>
 </div>
+<div class="toolbar">
+  <a href="#" class="card"></a>
+  <a href="#" class="ticket"></a>
+  <a href="#" class="wechat">
+    <div class="qr">
+      <img src="../dist/assets/wechat-qr.png" width="102" height="102" alt="">
+    </div>
+  </a>
+  <a href="#" class="gotop"></a>
+</div>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.js"></script>
 <script src="https://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
 <script>
   ~function () {
-//    $('.wrap').fullpage();
-
     var pc = $('.perspective-card')
     TweenMax.set(pc, {rotationY: 0, rotationX: 0, rotationZ: 0, transformPerspective: 1000});
     pc.mouseover(function() {
