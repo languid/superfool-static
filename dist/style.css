@@ -2335,7 +2335,7 @@ output {
     background-color: transparent; }
   .form-control[disabled], .form-control[readonly],
   fieldset[disabled] .form-control {
-    background-color: #eeeeee;
+    background-color: #1d243c;
     opacity: 1; }
   .form-control[disabled],
   fieldset[disabled] .form-control {
@@ -5998,6 +5998,9 @@ body {
   body {
     background-size: 100%;
     padding-bottom: 21.11111%; }
+  .wrap {
+    width: 100%;
+    overflow-x: hidden; }
   .header {
     padding-top: 15px; }
   .logo {
@@ -6025,11 +6028,11 @@ body {
     bottom: 15px;
     right: 15px;
     z-index: 10; }
-    .home .toolbar a {
+    .home .toolbar a, .home .toolbar span {
       position: relative;
       display: block;
       margin-bottom: 12px; }
-      .home .toolbar a i {
+      .home .toolbar a i, .home .toolbar span i {
         content: '';
         display: block;
         width: 42px;
@@ -6259,12 +6262,13 @@ body {
       .home .media .d-flex {
         margin-top: 6.94444%; }
       .home .media .video {
+        float: none;
         padding-top: 0; }
       .home .media video {
         width: 100%; }
       .home .media .content {
         padding: 0 15px;
-        margin-top: 14.81481%; }
+        margin-top: 9.25926%; }
         .home .media .content h2 img {
           width: 35.18519%; }
         .home .media .content br {
@@ -6457,6 +6461,7 @@ body {
           margin-bottom: 3.7037%; }
         .home .invited .card {
           width: 90%;
+          overflow: hidden;
           height: auto;
           margin: 0 auto; }
           .home .invited .card:after {
@@ -6612,7 +6617,8 @@ body {
           font-size: 1rem;
           width: 100px; }
         .home .conference .schedule .content {
-          padding-top: 3px; }
+          padding-top: 3px;
+          padding-right: 15px; }
         .home .conference .schedule h5 {
           font-size: 1rem;
           line-height: 1.5em; }
@@ -6645,7 +6651,8 @@ body {
         width: 20%; } }
   .home .contact {
     padding-bottom: 260px;
-    background: #252c60 url("assets/contact-bg.jpg") no-repeat center bottom; }
+    background: #252c60 url("assets/contact-bg.jpg") no-repeat center bottom;
+    overflow-x: hidden; }
     .home .contact .title-bg {
       position: relative;
       display: block;
@@ -6770,6 +6777,13 @@ body {
   display: block;
   color: #63687a;
   margin-top: 12px; }
+
+.sign-in label.error {
+  font-weight: normal;
+  padding-top: 5px;
+  font-size: .75rem;
+  color: #da686b;
+  margin-bottom: 0; }
 
 @media (max-width: 479px) {
   .sign-in h2 {

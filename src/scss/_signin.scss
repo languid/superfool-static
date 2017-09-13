@@ -73,6 +73,14 @@
     margin-top: 12px;
   }
 
+  label.error {
+    font-weight: normal;
+    padding-top: 5px;
+    font-size: .75rem;
+    color: #da686b;
+    margin-bottom: 0;
+  }
+
   @media #{$phone} {
     h2 {
       font-size: 1.5rem;

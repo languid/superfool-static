@@ -31,7 +31,7 @@
     bottom: 15px;
     right: 15px;
     z-index: 10;
-    a {
+    a, span {
       position: relative;
       display: block;
       i {
@@ -320,6 +320,7 @@
         margin-top: pc180(75px);
       }
       .video {
+        float: none;
         padding-top: 0;
       }
       video {
@@ -327,7 +328,7 @@
       }
       .content {
         padding: 0 15px;
-        margin-top: pc180(160px);
+        margin-top: pc180(100px);
         h2 {
           img {
             width: pc180(380px);
@@ -546,6 +547,7 @@
       }
       .card {
         width: 90%;
+        overflow: hidden;
         height: auto;
         margin: 0 auto;
         &:after {
@@ -749,6 +751,7 @@
         }
         .content {
           padding-top: 3px;
+          padding-right: 15px;
         }
         h5 {
           font-size: 1rem;
@@ -804,6 +807,7 @@
   .contact {
     padding-bottom: 260px;
     background: #252c60 url("assets/contact-bg.jpg") no-repeat center bottom;
+    overflow-x: hidden;
     .title-bg {
       position: relative;
       display: block;

@@ -45,6 +45,10 @@ body {
     background-size: 100%;
     padding-bottom: pc180(228px);
   }
+  .wrap {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .header {
     padding-top: $spacer;
   }

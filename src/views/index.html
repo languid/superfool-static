@@ -355,14 +355,14 @@
 <div class="toolbar">
   <a href="#" class="card"><i></i></a>
   <a href="#" class="ticket"><i></i></a>
-  <a href="#" class="wechat">
+  <span href="#" class="wechat">
     <i></i>
     <div class="qr">
       <img src="../dist/assets/wechat-qr.png" alt="">
       <p>扫一扫关注“精一天使”微信公众号</p>
       <div class="bg"></div>
     </div>
-  </a>
+  </span>
   <a href="#" class="gotop">
     <i></i>
   </a>
@@ -377,6 +377,7 @@
     }()
 
     var wechart = $('.toolbar .wechat')
+    var bg = wechart.find('.bg')
     var body = $(document.body)
 
     if (!isMobile) {
@@ -407,6 +408,10 @@
       wechart.on('mouseup', function () {
         body.addClass('blur')
         wechart.addClass('open')
+      })
+      bg.on('click', function () {
+        body.removeClass('blur')
+        wechart.removeClass('open')
       })
     }
   })

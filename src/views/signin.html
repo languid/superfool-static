@@ -14,47 +14,47 @@
   </div>
   <div class="container">
     <h2 class="text-center mb-4">个人天使征集信息</h2>
-    <form class="form">
+    <form class="form" name="form">
       <div class="form-group row">
         <label class="control-label col-sm-3">*天使姓名：</label>
         <div class="col-sm-9">
-          <input class="form-control">
+          <input class="form-control" name="name" required>
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">*联系方式：</label>
         <div class="col-sm-9">
-          <input class="form-control">
+          <input class="form-control" type="number" name="phone">
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">*所投项目代表：</label>
         <div class="col-sm-9">
-          <input class="form-control">
+          <input class="form-control" name="project">
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">*投资时间：</label>
         <div class="col-sm-9">
-          <input class="form-control">
+          <input class="form-control picker" readonly name="date">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-sm-3">*投资金额：</label>
+        <label class="control-label col-sm-3">*投资金额（万）：</label>
         <div class="col-sm-9">
-          <input class="form-control">
+          <input class="form-control" type="number" name="count">
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-xs-5 col-sm-3">*投资轮数：</label>
         <div class="col-xs-7 col-sm-9">
           <label class="radio-inline">
-            <input type="radio" name="step" value="option1">
+            <input type="radio" name="step" value="type" checked>
             <span class="indicator"></span>
             <span>种子轮</span>
           </label>
           <label class="radio-inline">
-            <input type="radio" name="step" value="option2">
+            <input type="radio" name="step" value="type">
             <span class="indicator"></span>
             <span>天使轮</span>
           </label>
@@ -66,23 +66,74 @@
           <small class="hint">限种子轮和天使轮项目</small>
         </label>
         <div class="col-sm-9">
-          <textarea class="form-control" rows="5" placeholder="(选填)"></textarea>
+          <textarea class="form-control" maxlength="200" rows="5" placeholder="(选填)" name="other"></textarea>
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">推荐人：</label>
         <div class="col-sm-9">
-          <input class="form-control" placeholder="(选填)">
+          <input class="form-control" placeholder="(选填)" name="referrer">
         </div>
       </div>
       <div class="form-group row">
         <label class="control-label col-sm-3">天使节寄语：</label>
         <div class="col-sm-9">
-          <textarea class="form-control" rows="5" placeholder="(选填)"></textarea>
+          <textarea class="form-control" maxlength="200" rows="5" placeholder="(选填)" name="words"></textarea>
         </div>
       </div>
-      <button class="btn btn-lg btn-secondary">提交信息</button>
+      <button type="submit" class="btn btn-lg btn-secondary">提交信息</button>
     </form>
   </div>
 </div>
+<link rel="stylesheet" href="//cdn.bootcss.com/air-datepicker/2.2.3/css/datepicker.min.css">
+<script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="//cdn.bootcss.com/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+<script src="//cdn.bootcss.com/air-datepicker/2.2.3/js/i18n/datepicker.zh.min.js"></script>
+<script>
+  queue.exec(function () {
+    $('.picker').datepicker({
+      dateFormat: 'yyyy-mm-dd',
+      autoClose: true,
+      language: 'zh'
+    })
+    $(document.forms.form).validate({
+      submitHandler: function(form) {
+        console.log('api here')
+      },
+      rules: {
+        name: 'required',
+        phone: {
+          required: true,
+          minlength: 11,
+          maxlength: 11,
+          number: true
+        },
+        project: 'required',
+        date: {
+          required: true,
+          date: true
+        },
+        count: {
+          required: true,
+          number: true
+        }
+      },
+      messages: {
+        name: '请填写姓名',
+        phone: {
+          required: '请填写正确的手机号码',
+          minlength: '请填写11位手机号码',
+          maxlength: '请填写11位手机号码',
+          number: '手机号码必须为数字'
+        },
+        project: '请填写所投项目',
+        date: '请选择正确的时间',
+        count: {
+          required: '请填写金额',
+          number: '请填写正确的金额'
+        }
+      }
+    })
+  })
+</script>
 </body>
