@@ -14,7 +14,7 @@
   </div>
   <div class="container">
     <h2 class="text-center mb-4">个人天使征集信息</h2>
-    <form class="form" name="form">
+    <form class="form" name="form" action="#">
       <div class="form-group row">
         <label class="control-label col-sm-3">*天使姓名：</label>
         <div class="col-sm-9">
@@ -86,7 +86,8 @@
   </div>
 </div>
 <link rel="stylesheet" href="//cdn.bootcss.com/air-datepicker/2.2.3/css/datepicker.min.css">
-<script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min.js"></script>
 <script src="//cdn.bootcss.com/air-datepicker/2.2.3/js/datepicker.min.js"></script>
 <script src="//cdn.bootcss.com/air-datepicker/2.2.3/js/i18n/datepicker.zh.min.js"></script>
 <script>
@@ -94,11 +95,21 @@
     $('.picker').datepicker({
       dateFormat: 'yyyy-mm-dd',
       autoClose: true,
-      language: 'zh'
+      language: 'zh',
+      maxDate: new Date()
     })
     $(document.forms.form).validate({
       submitHandler: function(form) {
-        console.log('api here')
+        $(form).ajaxSubmit({
+          url: '/api/create',
+          type: 'post',
+          success: function (data) {
+
+          },
+          error: function () {
+          }
+        })
+        return false
       },
       rules: {
         name: 'required',
