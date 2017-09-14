@@ -15,6 +15,9 @@
     margin-top: 64px;
     @extend .fz-24px;
   }
+  figure {
+    position: relative;
+  }
   .upload-img {
     margin-top: 76px;
     figure {
@@ -62,7 +65,6 @@
         float: none;
       }
       figure {
-        position: relative;
         margin: 0 auto;
         &:before {
           content: '';

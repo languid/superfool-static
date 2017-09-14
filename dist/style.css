@@ -6944,6 +6944,9 @@ body {
 .upload h5 {
   margin-top: 64px; }
 
+.upload figure {
+  position: relative; }
+
 .upload .upload-img {
   margin-top: 76px; }
   .upload .upload-img figure {
@@ -6983,7 +6986,6 @@ body {
     .upload .upload-img .col {
       float: none; }
     .upload .upload-img figure {
-      position: relative;
       margin: 0 auto; }
       .upload .upload-img figure:before {
         content: '';
