@@ -275,11 +275,12 @@
       .links {
         float: none;
         margin: 0 20px;
-        padding-top: pc180(75px);
+        padding-top: pc180(40px);
         a {
+          font-size: 1rem;
           text-align: center;
           display: block;
-          padding: 15px 0;
+          padding: 10px 0;
           background: #0c122a;
         }
         .user {

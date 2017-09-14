@@ -6341,11 +6341,12 @@ body {
         .home .brand .links {
           float: none;
           margin: 0 20px;
-          padding-top: 6.94444%; }
+          padding-top: 3.7037%; }
           .home .brand .links a {
+            font-size: 1rem;
             text-align: center;
             display: block;
-            padding: 15px 0;
+            padding: 10px 0;
             background: #0c122a; }
           .home .brand .links .user {
             margin-bottom: 2.77778%; } }
