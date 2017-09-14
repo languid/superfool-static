@@ -5901,7 +5901,7 @@ button.close {
 .fz-22px, .home .steps .step-list h5, .home .partner, .sign-in .control-label {
   font-size: 1.375em; }
 
-.fz-24px, .brand h1 span, .home .conference .schedule h5, .upload h5 {
+.fz-24px, .brand .title span, .home .conference .schedule h5, .upload h5 {
   font-size: 1.5rem; }
 
 .fz-28px, .home .section-title-en {
@@ -5982,17 +5982,100 @@ body {
 .logo {
   padding-top: 50px; }
 
-.brand h1 {
+.brand .title span, .brand .text, .brand .schedule, .brand .links {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 500ms ease; }
+
+.brand .title {
   text-align: center;
   margin-top: 128px; }
-  .brand h1 img {
-    display: block;
-    margin: 0 auto 50px; }
-  .brand h1 span {
+  .brand .title span {
     display: inline-block;
     padding: 5px 55px;
+    margin-top: 44px;
     background: #f9be2c;
-    color: #fff; }
+    color: #fff;
+    transition-delay: .9s; }
+
+.brand .text {
+  transition-delay: 1.2s; }
+
+.brand .waves {
+  position: absolute;
+  left: 0;
+  top: 310px;
+  opacity: 0;
+  transition: opacity 3s ease;
+  transition-delay: 1s; }
+
+.brand .schedule {
+  transition-delay: 1.3s; }
+
+.brand .links {
+  transition-delay: 1.4s; }
+
+.brand .title-sp {
+  position: relative;
+  text-align: center; }
+  .brand .title-sp p {
+    white-space: nowrap; }
+  .brand .title-sp i {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    background: url("assets/title-sp.png") no-repeat;
+    width: 154px;
+    height: 150px;
+    transition: all 500ms cubic-bezier(0, 0.9, 0.41, 1.38);
+    transform: scale(0.4);
+    opacity: 0; }
+  .brand .title-sp .char-1 {
+    background-position: 0 0px;
+    transition-delay: 70ms;
+    width: 145px;
+    height: 143px;
+    top: 3px; }
+  .brand .title-sp .char-2 {
+    background-position: 0 -170px;
+    transition-delay: 140ms; }
+  .brand .title-sp .char-3 {
+    background-position: 0 -340px;
+    transition-delay: 210ms;
+    width: 144px; }
+  .brand .title-sp .char-4 {
+    background-position: 0 -510px;
+    transition-delay: 280ms;
+    margin-left: -5%;
+    width: 144px; }
+  .brand .title-sp .char-5 {
+    background-position: 0 -680px;
+    transition-delay: 350ms;
+    margin-left: -4.4%;
+    width: 144px; }
+  .brand .title-sp .char-6 {
+    background-position: 0 -850px;
+    transition-delay: 420ms;
+    width: 136px;
+    height: 134px;
+    margin-left: -5%; }
+  .brand .title-sp .char-7 {
+    background-position: 0 -1020px;
+    transition-delay: 490ms;
+    width: 118px;
+    height: 133px;
+    margin-left: -2.5%; }
+
+.brand.show .waves {
+  opacity: 1; }
+
+.brand.show .title span, .brand.show .text, .brand.show .schedule, .brand.show .links {
+  opacity: 1;
+  transform: translateY(0); }
+
+.brand.show .title-sp i {
+  transform: scale(1);
+  opacity: 1; }
 
 @media (max-width: 479px) {
   body {
@@ -6008,12 +6091,45 @@ body {
     padding-top: 7.03704%; }
     .logo img {
       width: 29.62963%; }
-  .brand h1 {
+  .brand .waves {
+    top: 10%; }
+  .brand .title-sp {
+    margin-bottom: 4.62963%; }
+    .brand .title-sp i {
+      width: 51.33333px;
+      height: 50px;
+      background-size: 51.33333px auto; }
+    .brand .title-sp .char-1 {
+      background-position: 0 0px;
+      width: 48.33333px;
+      height: 47.66667px;
+      top: 1px; }
+    .brand .title-sp .char-2 {
+      background-position: 0 -56.66667px; }
+    .brand .title-sp .char-3 {
+      background-position: 0 -113.33333px;
+      height: 47px;
+      width: 48px; }
+    .brand .title-sp .char-4 {
+      background-position: 0 -170px;
+      height: 47px;
+      width: 48px; }
+    .brand .title-sp .char-5 {
+      background-position: 0 -226.66667px;
+      height: 47px;
+      width: 48px; }
+    .brand .title-sp .char-6 {
+      background-position: 0 -283.33333px;
+      width: 45.33333px;
+      height: 44.66667px; }
+    .brand .title-sp .char-7 {
+      background-position: 0 -340px;
+      width: 39.33333px;
+      height: 44.33333px;
+      margin-left: -2.5%; }
+  .brand .title {
     margin-top: 7.87037%; }
-    .brand h1 img {
-      width: 61.111%;
-      margin-bottom: 4.62963%; }
-    .brand h1 span {
+    .brand .title span {
       padding: 5px 10px;
       font-size: 1rem; } }
 
@@ -6027,7 +6143,13 @@ body {
     position: fixed;
     bottom: 15px;
     right: 15px;
-    z-index: 10; }
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 300ms ease; }
+    .home .toolbar.visible {
+      pointer-events: auto;
+      opacity: 1; }
     .home .toolbar a, .home .toolbar span {
       position: relative;
       display: block;
@@ -6131,10 +6253,6 @@ body {
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom; }
-    .home .brand .waves {
-      position: absolute;
-      left: 0;
-      top: 310px; }
     .home .brand .container {
       position: relative; }
       .home .brand .container:after {
@@ -6192,8 +6310,6 @@ body {
     @media (max-width: 479px) {
       .home .brand {
         padding-top: 2.46296%; }
-        .home .brand .waves {
-          top: 8%; }
         .home .brand .logo {
           margin-left: 15px; }
         .home .brand .title {

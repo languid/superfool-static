@@ -23,19 +23,100 @@ body {
 }
 
 .brand {
-  h1 {
+  .title span, .text, .schedule, .links {
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 500ms ease;
+  }
+  .title {
     text-align: center;
     margin-top: 128px;
-    img {
-      display: block;
-      margin: 0 auto 50px;
-    }
     span {
       display: inline-block;
       padding: 5px 55px;
+      margin-top: 44px;
       background: #f9be2c;
       color: #fff;
       @extend .fz-24px;
+      transition-delay: .9s;
+    }
+  }
+  .text {
+    transition-delay: 1.2s;
+  }
+  .waves {
+    position: absolute;
+    left: 0;
+    top: 310px;
+    opacity: 0;
+    transition: opacity 3s ease;
+    transition-delay: 1s;
+  }
+  .schedule {
+    transition-delay: 1.3s;
+  }
+  .links {
+    transition-delay: 1.4s;
+  }
+  .title-sp {
+    position: relative;
+    text-align: center;
+    p {
+      white-space: nowrap;
+    }
+    i {
+      position: relative;
+      vertical-align: middle;
+      display: inline-block;
+      background: url("assets/title-sp.png") no-repeat;
+      width: 154px;
+      height: 150px;
+      transition: all 500ms cubic-bezier(0,.9,.41,1.38);
+      transform: scale(.4);
+      opacity: 0;
+    }
+    @for $i from 1 through 7 {
+      .char-#{$i} {
+        background-position: 0 ($i - 1)*-170px;
+        transition-delay: $i*70ms;
+        @if $i == 1 {
+          width: 145px;
+          height: 143px;
+          top: 3px;
+        }
+        @if $i == 4 {
+          margin-left: -5%;
+        }
+        @if $i == 5 {
+          margin-left: -4.4%;
+        }
+        @if $i == 6 {
+          width: 136px;
+          height: 134px;
+          margin-left: -5%;
+        }
+        @if $i == 7 {
+          width: 118px;
+          height: 133px;
+          margin-left: -2.5%;
+        }
+        @if $i > 2 and $i < 6 {
+          width: 144px;
+        }
+      }
+    }
+  }
+  &.show {
+    .waves {
+      opacity: 1;
+    }
+    .title span, .text, .schedule, .links {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .title-sp i {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }
@@ -60,12 +141,45 @@ body {
     }
   }
   .brand {
-    h1 {
-      margin-top: pc180(85px);
-      img {
-        width: 61.111%;
-        margin-bottom: pc180(50px);
+    .waves {
+      top: 10%;
+    }
+    .title-sp {
+      margin-bottom: pc180(50px);
+      $times: 3;
+      i {
+        width: (154px/$times);
+        height: (150px/$times);
+        background-size: (154px/$times) auto;
       }
+      @for $i from 1 through 7 {
+        .char-#{$i} {
+          background-position: 0 ($i - 1)*(-170px/$times);
+          @if $i == 1 {
+            width: (145px/$times);
+            height: (143px/$times);
+            top: 1px;
+          }
+          @if $i == 3 or $i == 4 or $i == 5 {
+            height: (141px/$times);
+          }
+          @if $i == 6 {
+            width: (136px/$times);
+            height: (134px/$times);
+          }
+          @if $i == 7 {
+            width: (118px/$times);
+            height: (133px/$times);
+            margin-left: -2.5%;
+          }
+          @if $i > 2 and $i < 6 {
+            width: (144px/$times);
+          }
+        }
+      }
+    }
+    .title {
+      margin-top: pc180(85px);
       span {
         padding: 5px 10px;
         font-size: 1rem;

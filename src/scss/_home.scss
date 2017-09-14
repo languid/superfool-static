@@ -31,6 +31,13 @@
     bottom: 15px;
     right: 15px;
     z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    &.visible {
+      pointer-events: auto;
+      opacity: 1;
+    }
     a, span {
       position: relative;
       display: block;
@@ -152,12 +159,6 @@
     margin-bottom: 0;
     padding-bottom: 116px;
     background: url("assets/ft-bg.jpg") no-repeat center bottom;
-    .waves {
-      position: absolute;
-      left: 0;
-      top: 310px;
-    }
-
     .container {
       position: relative;
       &:after {
@@ -230,9 +231,6 @@
 
     @media #{$phone} {
       padding-top: pc180(26.6px);
-      .waves {
-        top: 8%;
-      }
       .logo {
         margin-left: 15px;
       }
