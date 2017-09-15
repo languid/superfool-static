@@ -2,6 +2,7 @@
 <body class="home">
 <div class="wrap">
   <div class="section brand">
+    <div class="particle-wave"></div>
     <div class="waves">
       <canvas id="waves"></canvas>
     </div>
@@ -364,6 +365,7 @@
   </a>
 </div>
 <script src="https://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdn.bootcss.com/three.js/r68/three.min.js"></script>
 <script>
   queue.exec(function () {
     var brand = $('.brand')
@@ -387,6 +389,79 @@
         '<iframe frameborder="0" width="' + width + '" height="' + height + '" src="https://v.qq.com/iframe/player.html?vid=j0341jc7k6m&tiny=0&auto=0" allowfullscreen></iframe>'
       )
     }
+
+    function particleWaves () {
+      var SEPARATION = 40, AMOUNTX = 130, AMOUNTY = 35;
+      var container = document.querySelector('.particle-wave');
+      var camera, scene, renderer;
+      var particles, particle, count = 0;
+      var windowHalfX = window.innerWidth / 2;
+      var windowHalfY = window.innerHeight / 2;
+
+      init();
+      animate();
+
+      function init() {
+        const w = brand.width();
+        const h = brand.outerHeight()
+        camera = new THREE.PerspectiveCamera( 120, w / h, 1, 10000 );
+        camera.position.y = 350; //changes how far back you can see i.e the particles towards horizon
+        camera.position.z = 300; //This is how close or far the particles are seen
+        camera.rotation.x = 0.35;
+        scene = new THREE.Scene();
+        particles = new Array();
+        var PI2 = Math.PI * 2;
+        var material = new THREE.SpriteCanvasMaterial( {
+          color: 0x5e6c98, //changes color of particles
+          program: function ( context ) {
+            context.beginPath();
+            context.arc( 0, 0, 0.1, 0, PI2, true );
+            context.fill();
+          }
+        });
+        var i = 0;
+        for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+          for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+            particle = particles[ i ++ ] = new THREE.Sprite( material );
+            particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
+            particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) - 10 );
+            scene.add( particle );
+          }
+        }
+        renderer = new THREE.CanvasRenderer({alpha: true});
+        renderer.setSize( w, h);
+        renderer.setClearColor( 0xffffff, 0);
+        container.appendChild( renderer.domElement );
+        window.addEventListener( 'resize', onWindowResize, false );
+      }
+      function onWindowResize() {
+        const w = brand.width();
+        const h = brand.outerHeight()
+        windowHalfX = w / 2;
+        windowHalfY = h / 2;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize( w, h );
+      }
+      function animate() {
+        requestAnimationFrame( animate );
+        render();
+      }
+      function render() {
+        var i = 0;
+        for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+          for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+            particle = particles[ i++ ];
+            particle.position.y = ( Math.sin( ( ix + count ) * 0.5 ) * 20 ) + ( Math.sin( ( iy + count ) * 0.5 ) * 20 );
+            particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 2 ) * 4 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
+          }
+        }
+        renderer.render( scene, camera );
+        count += 0.2;
+      }
+    }
+
+    particleWaves()
 
     if (!isMobile) {
       insertVideo(640, 533)

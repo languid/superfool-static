@@ -6009,6 +6009,13 @@ body {
   transition: opacity 3s ease;
   transition-delay: 1s; }
 
+.brand .particle-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .brand .schedule {
   transition-delay: 1.3s; }
 
@@ -6093,43 +6100,42 @@ body {
       width: 29.62963%; }
   .brand .waves {
     top: 10%; }
-  .brand .title-sp {
-    margin-bottom: 4.62963%; }
-    .brand .title-sp i {
-      width: 51.33333px;
-      height: 50px;
-      background-size: 51.33333px auto; }
-    .brand .title-sp .char-1 {
-      background-position: 0 0px;
-      width: 48.33333px;
-      height: 47.66667px;
-      top: 1px; }
-    .brand .title-sp .char-2 {
-      background-position: 0 -56.66667px; }
-    .brand .title-sp .char-3 {
-      background-position: 0 -113.33333px;
-      height: 47px;
-      width: 48px; }
-    .brand .title-sp .char-4 {
-      background-position: 0 -170px;
-      height: 47px;
-      width: 48px; }
-    .brand .title-sp .char-5 {
-      background-position: 0 -226.66667px;
-      height: 47px;
-      width: 48px; }
-    .brand .title-sp .char-6 {
-      background-position: 0 -283.33333px;
-      width: 45.33333px;
-      height: 44.66667px; }
-    .brand .title-sp .char-7 {
-      background-position: 0 -340px;
-      width: 39.33333px;
-      height: 44.33333px;
-      margin-left: -2.5%; }
+  .brand .title-sp i {
+    width: 51.33333px;
+    height: 50px;
+    background-size: 51.33333px auto; }
+  .brand .title-sp .char-1 {
+    background-position: 0 0px;
+    width: 48.33333px;
+    height: 47.66667px;
+    top: 1px; }
+  .brand .title-sp .char-2 {
+    background-position: 0 -56.66667px; }
+  .brand .title-sp .char-3 {
+    background-position: 0 -113.33333px;
+    height: 47px;
+    width: 48px; }
+  .brand .title-sp .char-4 {
+    background-position: 0 -170px;
+    height: 47px;
+    width: 48px; }
+  .brand .title-sp .char-5 {
+    background-position: 0 -226.66667px;
+    height: 47px;
+    width: 48px; }
+  .brand .title-sp .char-6 {
+    background-position: 0 -283.33333px;
+    width: 45.33333px;
+    height: 44.66667px; }
+  .brand .title-sp .char-7 {
+    background-position: 0 -340px;
+    width: 39.33333px;
+    height: 44.33333px;
+    margin-left: -2.5%; }
   .brand .title {
     margin-top: 7.87037%; }
     .brand .title span {
+      margin-top: 4.62963%;
       padding: 5px 10px;
       font-size: 1rem; } }
 
@@ -6309,7 +6315,8 @@ body {
         font-family: Impact; }
     @media (max-width: 479px) {
       .home .brand {
-        padding-top: 2.46296%; }
+        padding-top: 2.46296%;
+        background-size: 80% auto; }
         .home .brand .logo {
           margin-left: 15px; }
         .home .brand .title {
@@ -6351,10 +6358,11 @@ body {
           .home .brand .links .user {
             margin-bottom: 2.77778%; } }
   .home .section {
+    position: relative;
     margin: 0; }
   .home .media {
     padding-bottom: 130px;
-    background: #252c60 url("assets/media-ft-bg.jpg") no-repeat center bottom; }
+    background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom; }
     .home .media h2:after {
       content: '';
       margin-top: 50px;

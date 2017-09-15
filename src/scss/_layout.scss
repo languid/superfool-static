@@ -52,6 +52,13 @@ body {
     transition: opacity 3s ease;
     transition-delay: 1s;
   }
+  .particle-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   .schedule {
     transition-delay: 1.3s;
   }
@@ -145,7 +152,6 @@ body {
       top: 10%;
     }
     .title-sp {
-      margin-bottom: pc180(50px);
       $times: 3;
       i {
         width: (154px/$times);
@@ -181,6 +187,7 @@ body {
     .title {
       margin-top: pc180(85px);
       span {
+        margin-top: pc180(50px);
         padding: 5px 10px;
         font-size: 1rem;
       }

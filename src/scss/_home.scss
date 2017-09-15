@@ -231,6 +231,7 @@
 
     @media #{$phone} {
       padding-top: pc180(26.6px);
+      background-size: 80% auto;
       .logo {
         margin-left: 15px;
       }
@@ -291,12 +292,13 @@
   }
 
   .section {
+    position: relative;
     margin: 0;
   }
 
   .media {
     padding-bottom: 130px;
-    background: #252c60 url("assets/media-ft-bg.jpg") no-repeat center bottom;
+    background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom;
     h2 {
       @include tail($distance: 50px, $color: $secondary-color);
     }
