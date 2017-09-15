@@ -88,18 +88,6 @@
       </div>
       <div class="d-flex reverse">
         <div class="video col">
-          <video controls="controls" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360">
-            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
-            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
-            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg">
-            <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
-              <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
-              <param name="allowFullScreen" value="true">
-              <param name="wmode" value="transparent">
-              <param name="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}">
-              <img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below">
-            </object>
-          </video>
         </div>
         <div class="col content">
           <h2>
@@ -433,7 +421,15 @@
       toolbar.toggleClass('visible', document.body.scrollTop > brandHeight * .7)
     })
 
+    function insertVideo (width, height) {
+      $('.video').html(
+        '<iframe frameborder="0" width="' + width + '" height="' + height + '" src="https://v.qq.com/iframe/player.html?vid=j0341jc7k6m&tiny=0&auto=0" allowfullscreen></iframe>'
+      )
+    }
+
     if (!isMobile) {
+      insertVideo(640, 533)
+
       var pc = $('.perspective-card')
       TweenMax.set(pc, {rotationY: 0, rotationX: 0, rotationZ: 0, transformPerspective: 1000})
       pc.mouseover(function() {
@@ -458,6 +454,7 @@
         wechart.removeClass('active')
       })
     } else {
+      insertVideo(window.innerWidth, window.innerWidth/1.2)
       lineSize = 3
       wechart.on('mouseup', function () {
         body.addClass('blur')

@@ -6378,17 +6378,12 @@ body {
     .home .media .video {
       text-align: right;
       padding-top: 198px; }
-    .home .media video {
-      width: 640px;
-      height: 56.25%; }
     @media (max-width: 479px) {
       .home .media .d-flex {
         margin-top: 6.94444%; }
       .home .media .video {
         float: none;
         padding-top: 0; }
-      .home .media video {
-        width: 100%; }
       .home .media .content {
         padding: 0 15px;
         margin-top: 9.25926%; }

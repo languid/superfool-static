@@ -319,10 +319,6 @@
       text-align: right;
       padding-top: 198px;
     }
-    video {
-      width: 640px;
-      height: 56.25%;
-    }
     @media #{$phone} {
       .d-flex {
         margin-top: pc180(75px);
@@ -330,9 +326,6 @@
       .video {
         float: none;
         padding-top: 0;
-      }
-      video {
-        width: 100%;
       }
       .content {
         padding: 0 15px;
