@@ -299,6 +299,7 @@
   .media {
     padding-bottom: 130px;
     background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom;
+    background-size: 100% 100%;
     h2 {
       @include tail($distance: 50px, $color: $secondary-color);
     }
@@ -322,6 +323,7 @@
       padding-top: 198px;
     }
     @media #{$phone} {
+      background-size: auto;
       .d-flex {
         margin-top: pc180(75px);
       }
@@ -347,6 +349,7 @@
   .highlights {
     height: 996px;
     background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
+    background-size: 100% 100%;
     .projects {
       margin-top: 100px;
     }
@@ -375,6 +378,7 @@
       background-color: #252c60;
       background-position: 0 0;
       background-repeat: no-repeat;
+      background-size: 100% 100%;
       text-align: center;
       box-shadow: 5px 3px 5px rgba(#000, .5);
       .en-title {
@@ -419,6 +423,7 @@
     }
 
     @media #{$phone} {
+      background-size: auto;
       height: auto;
       padding-bottom: pc180(170px);
       .projects {
@@ -670,6 +675,7 @@
 
   .conference {
     background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom;
+    background-size: 100% 100%;
     .schedule {
       margin: 52px 0 0 12px;
       > .list-group-item {
@@ -745,6 +751,7 @@
     }
 
     @media #{$phone} {
+      background-size: auto;
       .schedule {
         margin-left: pc180(65px);
         .time {
@@ -789,6 +796,7 @@
     }
 
     @media #{$phone} {
+      font-size: 1.125rem;
       .d-flex {
         padding: 0 15px;
       }

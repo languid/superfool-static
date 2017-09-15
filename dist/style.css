@@ -5971,7 +5971,8 @@ body {
   background-image: url("./assets/ft-bg.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 1rem; }
 
 .header {
   padding-top: 46px; }
@@ -6084,6 +6085,15 @@ body {
   transform: scale(1);
   opacity: 1; }
 
+#particles-js {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10; }
+
 @media (max-width: 479px) {
   body {
     background-size: 100%;
@@ -6099,38 +6109,38 @@ body {
     .logo img {
       width: 29.62963%; }
   .brand .waves {
-    top: 10%; }
+    top: 3%; }
   .brand .title-sp i {
-    width: 51.33333px;
-    height: 50px;
-    background-size: 51.33333px auto; }
+    width: 64.16667px;
+    height: 62.5px;
+    background-size: 64.16667px auto; }
   .brand .title-sp .char-1 {
     background-position: 0 0px;
-    width: 48.33333px;
-    height: 47.66667px;
+    width: 60.41667px;
+    height: 59.58333px;
     top: 1px; }
   .brand .title-sp .char-2 {
-    background-position: 0 -56.66667px; }
+    background-position: 0 -70.83333px; }
   .brand .title-sp .char-3 {
-    background-position: 0 -113.33333px;
-    height: 47px;
-    width: 48px; }
+    background-position: 0 -141.66667px;
+    height: 58.75px;
+    width: 60px; }
   .brand .title-sp .char-4 {
-    background-position: 0 -170px;
-    height: 47px;
-    width: 48px; }
+    background-position: 0 -212.5px;
+    height: 58.75px;
+    width: 60px; }
   .brand .title-sp .char-5 {
-    background-position: 0 -226.66667px;
-    height: 47px;
-    width: 48px; }
-  .brand .title-sp .char-6 {
     background-position: 0 -283.33333px;
-    width: 45.33333px;
-    height: 44.66667px; }
+    height: 58.75px;
+    width: 60px; }
+  .brand .title-sp .char-6 {
+    background-position: 0 -354.16667px;
+    width: 56.66667px;
+    height: 55.83333px; }
   .brand .title-sp .char-7 {
-    background-position: 0 -340px;
-    width: 39.33333px;
-    height: 44.33333px;
+    background-position: 0 -425px;
+    width: 49.16667px;
+    height: 55.41667px;
     margin-left: -2.5%; }
   .brand .title {
     margin-top: 7.87037%; }
@@ -6138,6 +6148,40 @@ body {
       margin-top: 4.62963%;
       padding: 5px 10px;
       font-size: 1rem; } }
+
+@media (min-device-width: 375px) and (max-device-width: 667px) {
+  .brand .title-sp i {
+    width: 77px;
+    height: 75px;
+    background-size: 77px auto; }
+  .brand .title-sp .char-1 {
+    background-position: 0 0px;
+    width: 72.5px;
+    height: 71.5px;
+    top: 1px; }
+  .brand .title-sp .char-2 {
+    background-position: 0 -85px; }
+  .brand .title-sp .char-3 {
+    background-position: 0 -170px;
+    height: 70.5px;
+    width: 72px; }
+  .brand .title-sp .char-4 {
+    background-position: 0 -255px;
+    height: 70.5px;
+    width: 72px; }
+  .brand .title-sp .char-5 {
+    background-position: 0 -340px;
+    height: 70.5px;
+    width: 72px; }
+  .brand .title-sp .char-6 {
+    background-position: 0 -425px;
+    width: 68px;
+    height: 67px; }
+  .brand .title-sp .char-7 {
+    background-position: 0 -510px;
+    width: 59px;
+    height: 66.5px;
+    margin-left: -2.5%; } }
 
 .home {
   padding-bottom: 0;
@@ -6362,7 +6406,8 @@ body {
     margin: 0; }
   .home .media {
     padding-bottom: 130px;
-    background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom; }
+    background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom;
+    background-size: 100% 100%; }
     .home .media h2:after {
       content: '';
       margin-top: 50px;
@@ -6387,21 +6432,24 @@ body {
       text-align: right;
       padding-top: 198px; }
     @media (max-width: 479px) {
-      .home .media .d-flex {
-        margin-top: 6.94444%; }
-      .home .media .video {
-        float: none;
-        padding-top: 0; }
-      .home .media .content {
-        padding: 0 15px;
-        margin-top: 9.25926%; }
-        .home .media .content h2 img {
-          width: 35.18519%; }
-        .home .media .content br {
-          display: none; } }
+      .home .media {
+        background-size: auto; }
+        .home .media .d-flex {
+          margin-top: 6.94444%; }
+        .home .media .video {
+          float: none;
+          padding-top: 0; }
+        .home .media .content {
+          padding: 0 15px;
+          margin-top: 9.25926%; }
+          .home .media .content h2 img {
+            width: 35.18519%; }
+          .home .media .content br {
+            display: none; } }
   .home .highlights {
     height: 996px;
-    background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top; }
+    background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
+    background-size: 100% 100%; }
     .home .highlights .projects {
       margin-top: 100px; }
     .home .highlights .list-group-item {
@@ -6425,6 +6473,7 @@ body {
       background-color: #252c60;
       background-position: 0 0;
       background-repeat: no-repeat;
+      background-size: 100% 100%;
       text-align: center;
       box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5); }
       .home .highlights .card .en-title {
@@ -6469,6 +6518,7 @@ body {
       text-align: center; }
     @media (max-width: 479px) {
       .home .highlights {
+        background-size: auto;
         height: auto;
         padding-bottom: 15.74074%; }
         .home .highlights .projects {
@@ -6677,7 +6727,8 @@ body {
             .home .steps .step-list .card h5 {
               font-size: 1.25rem; } }
   .home .conference {
-    background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom; }
+    background: #252c60 url("assets/conference-bg.jpg") no-repeat center bottom;
+    background-size: 100% 100%; }
     .home .conference .schedule {
       margin: 52px 0 0 12px; }
       .home .conference .schedule > .list-group-item {
@@ -6736,22 +6787,24 @@ body {
       .home .conference .schedule h5 {
         font-weight: bold; }
     @media (max-width: 479px) {
-      .home .conference .schedule {
-        margin-left: 6.01852%; }
-        .home .conference .schedule .time {
-          float: none;
-          font-size: 1rem;
-          width: 100px; }
-        .home .conference .schedule .content {
-          padding-top: 3px;
-          padding-right: 15px; }
-        .home .conference .schedule h5 {
-          font-size: 1rem;
-          line-height: 1.5em; }
-        .home .conference .schedule .content-list .list-group-item {
-          float: none;
-          width: auto;
-          margin-top: 15px; } }
+      .home .conference {
+        background-size: auto; }
+        .home .conference .schedule {
+          margin-left: 6.01852%; }
+          .home .conference .schedule .time {
+            float: none;
+            font-size: 1rem;
+            width: 100px; }
+          .home .conference .schedule .content {
+            padding-top: 3px;
+            padding-right: 15px; }
+          .home .conference .schedule h5 {
+            font-size: 1rem;
+            line-height: 1.5em; }
+          .home .conference .schedule .content-list .list-group-item {
+            float: none;
+            width: auto;
+            margin-top: 15px; } }
   .home .partner .section-title {
     margin-bottom: 60px; }
   .home .partner .d-flex {
@@ -6764,17 +6817,19 @@ body {
     border: 1px solid #1d284a;
     margin: 0 14px 14px 0; }
   @media (max-width: 479px) {
-    .home .partner .d-flex {
-      padding: 0 15px; }
-    .home .partner span.col {
-      float: none;
-      width: auto; }
-    .home .partner .content {
-      margin-top: 4.16667%;
-      font-size: 1.25rem; }
-      .home .partner .content img {
-        float: left;
-        width: 20%; } }
+    .home .partner {
+      font-size: 1.125rem; }
+      .home .partner .d-flex {
+        padding: 0 15px; }
+      .home .partner span.col {
+        float: none;
+        width: auto; }
+      .home .partner .content {
+        margin-top: 4.16667%;
+        font-size: 1.25rem; }
+        .home .partner .content img {
+          float: left;
+          width: 20%; } }
   .home .contact {
     padding-bottom: 260px;
     background: #252c60 url("assets/contact-bg.jpg") no-repeat center bottom;
