@@ -231,6 +231,7 @@
 
     @media #{$phone} {
       padding-top: pc180(26.6px);
+      padding-bottom: pc180(80px);
       background-size: 80% auto;
       .logo {
         margin-left: 15px;
@@ -603,6 +604,9 @@
         height: 148px;
         text-align: center;
         box-shadow: 3px 5px 5px 0 rgba(#000, .3);
+        background-color: #0a1647;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
       }
       h5 {
         padding-top: 58px;
@@ -621,14 +625,14 @@
       }
       .c1 {
         .card {
-          background: #0a1647 url("assets/steps-link-bg-1.jpg") no-repeat;
+          background-image: url("assets/steps-link-bg-1.jpg");
         }
       }
       .c2 {
         width: 34%;
         .card {
           margin: 0 auto;
-          background: #0a1647 url("assets/steps-link-bg-2.jpg") no-repeat;
+          background-image: url("assets/steps-link-bg-2.jpg");
         }
         i {
           background-position: 0 -74px;
@@ -637,7 +641,7 @@
       .c3 {
         .card {
           margin-left: auto;
-          background: #0a1647 url("assets/steps-link-bg-3.jpg") no-repeat;
+          background-image: url("assets/steps-link-bg-3.jpg");
         }
         i {
           background-position: 0 -148px;
@@ -756,15 +760,19 @@
         margin-left: pc180(65px);
         .time {
           float: none;
-          font-size: 1rem;
+          font-size: .875rem;
           width: 100px;
         }
         .content {
           padding-top: 3px;
           padding-right: 15px;
+          font-size: .75rem;
+        }
+        .place {
+          font-size: .75rem;
         }
         h5 {
-          font-size: 1rem;
+          font-size: .875rem;
           line-height: 1.5em;
         }
         .content-list .list-group-item {
@@ -796,7 +804,7 @@
     }
 
     @media #{$phone} {
-      font-size: 1.125rem;
+      font-size: 1rem;
       .d-flex {
         padding: 0 15px;
       }
@@ -806,7 +814,7 @@
       }
       .content {
         margin-top: pc180(45px);
-        font-size: 1.25rem;
+        font-size: 1rem;
         img {
           float: left;
           width: 20%;

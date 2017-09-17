@@ -57,6 +57,7 @@ body {
 }
 
 .brand {
+  overflow: hidden;
   .title span, .text, .schedule, .links {
     opacity: 0;
     transform: translateY(30%);
