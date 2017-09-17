@@ -1,6 +1,12 @@
 .home {
   padding-bottom: 0;
   background-image: none;
+
+  .perspective-card {
+    transform-origin: 50% 50%;
+    -webkit-font-smoothing: antialiased;
+  }
+
   @mixin tail ($width: 60px, $distance: 30px, $color: #c59a19, $center: false) {
     &:after {
       content: '';
@@ -349,6 +355,7 @@
 
   .highlights {
     height: 996px;
+    overflow: hidden;
     background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
     background-size: 100% 100%;
     .projects {
@@ -477,6 +484,7 @@
   }
 
   .invited {
+    background: #000;
     background: #0e1633 url("assets/invited-bg.jpg") no-repeat right top;
     height: 999px;
     .list-group {
