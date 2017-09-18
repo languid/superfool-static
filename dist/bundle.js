@@ -7,7 +7,6 @@ queue.exec(function () {
     var waveLength = 100;
     if (isMobile) {
       lineWidth = 8;
-      document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px';
     }
     var waves = document.getElementById('waves');
     if (waves) {

@@ -197,14 +197,14 @@ body {
       top: 3%;
     }
     .title-sp {
-      @include title-sp(2.4);
+      @include title-sp(2.6);
     }
     .title {
       margin-top: pc180(85px);
       span {
         margin-top: pc180(50px);
         padding: 5px 10px;
-        font-size: 1rem;
+        font-size: .875rem;
       }
     }
   }

@@ -139,7 +139,7 @@
     @include tail;
     @media #{$phone} {
       font-size: 1.25rem;
-      padding-left: pc180(60px);
+      padding-left: .9375rem;
       padding-top: pc180(140px);
     }
   }
@@ -150,7 +150,7 @@
     @media #{$phone} {
       font-size: 1.5rem;
       margin-top: pc180(54px);
-      padding-left: pc180(60px);
+      padding-left: .9375rem;
     }
   }
 
@@ -192,7 +192,7 @@
     }
     .links {
       float: right;
-      padding-top: 140px;
+      padding-top: 160px;
       margin-right: 108px;
       a {
         display: block;
@@ -208,6 +208,7 @@
     }
     .schedule {
       margin-top: 90px;
+      margin-bottom: 0;
       @include clearfix;
       color: #fff;
       .list-group-item {
@@ -247,7 +248,7 @@
       }
       .text {
         margin-top: 5%;
-        font-size: .875rem;
+        font-size: .75rem;
       }
       .container:after {
         display: none;
@@ -259,14 +260,13 @@
       }
       .schedule {
         text-align: center;
-        margin-top: pc180(45px);
+        margin-top: 2rem;
         .list-group-item {
           float: none;
           margin: 0;
         }
         .location:after {
-          margin-left: auto;
-          margin-right: auto;
+          margin: .5rem auto 0;
         }
         .country, .city {
           display: inline;
@@ -274,10 +274,11 @@
         .city:before {
           content: '•';
           font-size: 0.625rem;
-          margin: 0 10px 0 9px;
+          margin: 0 10px 0 5px;
         }
         .time {
-          margin-top: 20px;
+          margin: 0;
+          font-size: 1.8rem;
         }
       }
       .links {
@@ -313,7 +314,7 @@
     .d-flex {
       margin-top: 95px;
     }
-    .content {
+    .text-content {
       margin-top: 64px;
       position: relative;
     }
@@ -338,16 +339,15 @@
         float: none;
         padding-top: 0;
       }
-      .content {
-        padding: 0 15px;
+      .text-content {
         margin-top: pc180(100px);
+      }
+      .content {
+        padding: .9375rem .9375rem 0;
         h2 {
           img {
             width: pc180(380px);
           }
-        }
-        br {
-          display: none;
         }
       }
     }
@@ -383,10 +383,11 @@
     .card {
       width: 269px;
       height: 418px;
+      margin: 0 auto;
       background-color: #252c60;
       background-position: 0 0;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       text-align: center;
       box-shadow: 5px 3px 5px rgba(#000, .5);
       .en-title {
@@ -397,14 +398,12 @@
       background-image: url("assets/highlights-c1-bg.jpg");
     }
     .c2 .card {
-      margin: 0 auto;
       background-image: url("assets/highlights-c2-bg.jpg");
       i::after {
         background-position: 0 -68px;
       }
     }
     .c3 .card {
-      margin-left: auto;
       background-image: url("assets/highlights-c3-bg.jpg");
       i::after {
         background-position: 0 -136px;
@@ -484,7 +483,6 @@
   }
 
   .invited {
-    background: #000;
     background: #0e1633 url("assets/invited-bg.jpg") no-repeat right top;
     height: 999px;
     .list-group {
@@ -556,6 +554,7 @@
       height: auto;
       padding-bottom: pc180(100px);
       .list-group {
+        padding: 0 .9375rem;
         margin-top: pc180(100px);
       }
       .list-group-item {
@@ -563,10 +562,9 @@
         margin-bottom: pc180(40px);
       }
       .card {
-        width: 90%;
+        width: 95%;
         overflow: hidden;
         height: auto;
-        margin: 0 auto;
         &:after {
           top: pc180(245px);
         }
@@ -583,6 +581,7 @@
   }
 
   .steps {
+    overflow: hidden;
     height: 996px;
     background: #0d142e url("assets/highlights-bg.jpg") no-repeat center top;
     background-size: cover;
@@ -661,7 +660,7 @@
       height: auto;
       padding-bottom: pc180(150px);
       .step-list {
-        margin-top: pc180(70px);
+        margin: pc180(70px) .9375rem 0;
         .list-group-item {
           @include clearfix;
           float: none;
@@ -814,7 +813,7 @@
     @media #{$phone} {
       font-size: 1rem;
       .d-flex {
-        padding: 0 15px;
+        padding: 0 .9375rem;
       }
       span.col {
         float: none;
@@ -880,7 +879,7 @@
         width: auto;
         &:before {
           left: 5%;
-          top: -150px;
+          top: -160px;
           font-size: 8rem;
         }
       }

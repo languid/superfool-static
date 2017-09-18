@@ -4,10 +4,16 @@
   }
   .form {
     margin-top: 80px;
-    padding: 0 100px;
+    padding: 0 40px 0 80px;
   }
   .form-group {
     margin-bottom: 32px;
+  }
+  .left {
+    width: 620px;
+  }
+  .right {
+    text-align: right;
   }
   .radio-inline {
     padding-left: 25px;
@@ -72,7 +78,9 @@
     @extend .fz-14px;
     margin-top: 12px;
   }
-
+  .offset-label {
+    padding-top: 5px;
+  }
   label.error {
     font-weight: normal;
     padding-top: 5px;
@@ -82,6 +90,13 @@
   }
 
   @media #{$phone} {
+    .left {
+      width: auto;
+      float: none;
+    }
+    .right {
+      display: none;
+    }
     h2 {
       font-size: 1.5rem;
       margin-top: pc180(128px);

@@ -29,70 +29,77 @@
   <div class="container">
     <h2 class="text-center mb-4">个人天使征集信息</h2>
     <form class="form" name="form" action="#">
-      <div class="form-group row">
-        <label class="control-label col-sm-3">*天使姓名：</label>
-        <div class="col-sm-9">
-          <input class="form-control" name="name" required>
+      <div class="d-flex">
+        <div class="col left">
+          <div class="form-group row">
+            <label class="control-label offset-label col-sm-4">*天使姓名：</label>
+            <div class="col-sm-8">
+              <input class="form-control" name="name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label offset-label col-sm-4">*联系方式：</label>
+            <div class="col-sm-8">
+              <input class="form-control" name="phone">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label offset-label col-sm-4">*所投项目代表：</label>
+            <div class="col-sm-8">
+              <input class="form-control" name="project">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label offset-label col-sm-4">*投资时间：</label>
+            <div class="col-sm-8">
+              <input class="form-control picker" readonly name="date">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label offset-label col-sm-4">*投资金额（万）：</label>
+            <div class="col-sm-8">
+              <input class="form-control" type="number" name="count">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-xs-5 col-sm-4">*投资轮数：</label>
+            <div class="col-xs-7 col-sm-8">
+              <label class="radio-inline">
+                <input type="radio" name="step" value="type" checked>
+                <span class="indicator"></span>
+                <span>种子轮</span>
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="step" value="type">
+                <span class="indicator"></span>
+                <span>天使轮</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-sm-4">
+              其他投资项目：
+              <small class="hint">限种子轮和天使轮项目</small>
+            </label>
+            <div class="col-sm-8">
+              <textarea class="form-control" maxlength="200" rows="5" placeholder="(选填)" name="other"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label offset-label col-sm-4">推荐人：</label>
+            <div class="col-sm-8">
+              <input class="form-control" placeholder="(选填)" name="referrer">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-sm-4">天使节寄语：</label>
+            <div class="col-sm-8">
+              <textarea class="form-control" maxlength="200" rows="5" placeholder="(选填)" name="words"></textarea>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">*联系方式：</label>
-        <div class="col-sm-9">
-          <input class="form-control" type="number" name="phone">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">*所投项目代表：</label>
-        <div class="col-sm-9">
-          <input class="form-control" name="project">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">*投资时间：</label>
-        <div class="col-sm-9">
-          <input class="form-control picker" readonly name="date">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">*投资金额（万）：</label>
-        <div class="col-sm-9">
-          <input class="form-control" type="number" name="count">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-xs-5 col-sm-3">*投资轮数：</label>
-        <div class="col-xs-7 col-sm-9">
-          <label class="radio-inline">
-            <input type="radio" name="step" value="type" checked>
-            <span class="indicator"></span>
-            <span>种子轮</span>
-          </label>
-          <label class="radio-inline">
-            <input type="radio" name="step" value="type">
-            <span class="indicator"></span>
-            <span>天使轮</span>
-          </label>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">
-          其他投资项目：
-          <small class="hint">限种子轮和天使轮项目</small>
-        </label>
-        <div class="col-sm-9">
-          <textarea class="form-control" maxlength="200" rows="5" placeholder="(选填)" name="other"></textarea>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">推荐人：</label>
-        <div class="col-sm-9">
-          <input class="form-control" placeholder="(选填)" name="referrer">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-sm-3">天使节寄语：</label>
-        <div class="col-sm-9">
-          <textarea class="form-control" maxlength="200" rows="5" placeholder="(选填)" name="words"></textarea>
+        <div class="col right">
+          <a href="#"><img src="../dist/assets/ad.jpg" alt=""></a>
         </div>
       </div>
       <button type="submit" class="btn btn-lg btn-secondary">提交信息</button>

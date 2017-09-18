@@ -1,5 +1,5 @@
 <% extend '_layout' %>
-<body class="sign-in upload">
+<body class="upload">
 <div class="wrap">
   <div class="brand">
     <div class="stars">
@@ -27,26 +27,20 @@
     </div>
   </div>
   <div class="container">
+    <div class="notify">
+      <img src="../dist/assets/submitted-sccess.jpg" alt="">
+      <p>信息已提交成功！</p>
+      <p>上传头像，获得个人天使认证卡</p>
+    </div>
     <form class="form" id="form">
-      <div class="notify">
-        <img src="../dist/assets/submitted-sccess.jpg" alt="">
-        <p>信息已提交成功！</p>
-      </div>
-      <h5>上传头像，即可生成认证卡片</h5>
-      <div class="d-flex upload-img">
-        <div class="col">
-          <figure onclick="document.forms.form.file.click()">
-            <img class="avator" src="" alt="">
-            <span class="hidden-xs">头像</span>
-          </figure>
-        </div>
-        <div class="col">
-          <input type="file" name="file" class="hidden" accept="image/jpeg,image/gif,image/png">
-          <button class="btn btn-default" onclick="document.forms.form.file.click()">本地上传</button>
-          <p class="visible-xs hint-click">* 点击头像区域上传图片</p>
-          <p class="hint">仅支持JPG、GIF、PNG格式，文件小于5M.(图片尽量高清）</p>
-          <button class="btn btn-lg btn-secondary">立即生成</button>
-        </div>
+      <div class="upload-img">
+        <figure onclick="document.forms.form.file.click();return false;">
+          <img class="avator" src="" alt="">
+        </figure>
+        <input type="file" name="file" class="hidden" accept="image/jpeg,image/gif,image/png">
+        <p class="hint">* 点击头像区域上传图片</p>
+        <p class="hint">仅支持JPG、GIF、PNG格式，文件小于5M</p>
+        <button class="btn btn-lg btn-secondary">立即生成</button>
       </div>
     </form>
   </div>
