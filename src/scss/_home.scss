@@ -483,6 +483,7 @@
   }
 
   .invited {
+    overflow: hidden;
     background: #0e1633 url("assets/invited-bg.jpg") no-repeat right top;
     height: 999px;
     .list-group {
