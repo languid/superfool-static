@@ -78,10 +78,8 @@
     </div>
     <form class="form" id="form">
       <div class="upload-img">
-        <figure onclick="document.forms.form.file.click();return false;">
-          <img class="avator" src="" alt="">
-        </figure>
-        <input type="file" name="file" class="hidden" accept="image/jpeg,image/gif,image/png">
+        <div class="figure" onclick="document.forms.form.file.click();return false;"></div>
+        <input type="file" name="file" class="hidden" onchange="selectFile(this)" accept="image/*">
         <p class="hint">* 点击头像区域上传图片</p>
         <p class="hint">仅支持JPG、GIF、PNG格式，文件小于5M</p>
         <button class="btn btn-lg btn-secondary">立即生成</button>
@@ -90,41 +88,23 @@
   </div>
 </div>
 <script>
-  queue.exec(function () {
-
-    if (window['FileReader']) {
-
-      var avator = document.querySelector('.avator')
-
-      function getFileReader (options) {
-        var fr = new FileReader()
-        options = Object.assign({
-          success: $.noop,
-          error: $.noop
-        }, options)
-        fr.onloadend = function () {
-          options.success.apply(fr, arguments)
-        }
-        fr.onerror = function () {
-          options.error.apply(fr, arguments)
-        }
-        return fr
-      }
-
-      $(document.forms.form.file).on('change', function (e) {
-        var file = e.target.files[0]
-        var fr = getFileReader({
-          success: function () {
-            avator.src = fr.result
-          },
-          error: function () {
-            console.log('error')
-          }
-        })
-        fr.readAsDataURL(file)
-      })
+  function selectFile (input) {
+    var figure = document.querySelector('.figure')
+    var img
+    var fr = new FileReader()
+    fr.onerror = function () {
+      alert('error')
     }
-  })
+    fr.onloadend = function (e) {
+      if (img) {
+        figure.removeChild(img)
+      }
+      img = new Image()
+      img.src = e.target.result
+      figure.appendChild(img)
+    }
+    fr.readAsDataURL(input.files[0])
+  }
 </script>
 </body>
   <script src="../dist/bundle.js"></script>
