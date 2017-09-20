@@ -2,6 +2,12 @@
   h2 {
     margin-top: 85px;
   }
+  .img-card {
+    display: block;
+    margin: 65px auto 0;
+    width:95%;
+    max-width:656px;
+  }
   .panel {
     position: relative;
     width: 95%;
@@ -124,6 +130,9 @@
     h2 {
       margin-top: pc180(158px);
       font-size: 1.75rem;
+    }
+    .img-card {
+      margin-top: pc180(80px);
     }
     .panel {
       padding: pc180(42px) pc180(36px) pc180(68px);
