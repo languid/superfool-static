@@ -383,7 +383,6 @@
 <div id="particles-js"></div>
 <script src="//cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
 <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
-<script src="//cdn.bootcss.com/video.js/6.2.8/lang/zh-CN.js"></script>
 <script>
   queue.exec(function () {
     var brand = $('.brand')
@@ -398,9 +397,9 @@
         scrollTop: '0'
       })
     })
-
     $(window).scroll(function () {
-      toolbar.toggleClass('visible', document.body.scrollTop > brandHeight * .7)
+      var st = document.documentElement.scrollTop || document.body.scrollTop
+      toolbar.toggleClass('visible', st > brandHeight * .7)
     })
 
     if (!isMobile) {
