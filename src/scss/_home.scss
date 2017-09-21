@@ -317,6 +317,11 @@
     .text-content {
       margin-top: 64px;
       position: relative;
+      strong {
+        color: #f9be2c;
+        font-weight: bold;
+        @extend .fz-18px;
+      }
     }
     p {
       color: #fff;
@@ -488,13 +493,20 @@
     overflow: hidden;
     background: #0e1633 url("assets/invited-bg.jpg") no-repeat right top;
     height: 999px;
-    .list-group {
-      margin-top: 135px;
-      @include clearfix;
+    .swiper-container {
+      margin: 135px 50px 0;
     }
-    .list-group-item {
-      float: left;
-      width: 25%;
+    .swiper-wrapper {
+      width: 90%;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .pos-r {
+      position: relative;
     }
     .card {
       position: relative;
@@ -556,18 +568,21 @@
     @media #{$phone} {
       height: auto;
       padding-bottom: pc180(100px);
-      .list-group {
+      .swiper-container {
+        width: 100%;
         padding: 0 .9375rem;
         margin-top: pc180(100px);
       }
-      .list-group-item {
+      .swiper-slide {
         width: 50%;
-        margin-bottom: pc180(40px);
+      }
+      .swiper-button-prev, .swiper-button-next {
+        display: none;
       }
       .card {
         width: 95%;
         overflow: hidden;
-        height: auto;
+        height: 300px;
         &:after {
           top: pc180(245px);
         }
@@ -868,7 +883,6 @@
         margin-top: 16px;
       }
     }
-
     @media #{$phone} {
       padding-bottom: pc180(220px);
       background-size: 100%;

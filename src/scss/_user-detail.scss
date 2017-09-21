@@ -5,8 +5,10 @@
   .img-card {
     display: block;
     margin: 65px auto 0;
-    width:95%;
+    width: 80%;
     max-width:656px;
+    box-shadow: 3px 0 5px 0 rgba(#000, .3);
+    border-radius: 5px;
   }
   .panel {
     position: relative;
@@ -130,6 +132,12 @@
     h2 {
       margin-top: pc180(158px);
       font-size: 1.75rem;
+    }
+    .btn {
+      padding: 5px 10px;
+      margin-top: 1rem;
+      width: 80%;
+      font-size: 1rem;
     }
     .img-card {
       margin-top: pc180(80px);
